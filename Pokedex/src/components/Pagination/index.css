@@ -1,0 +1,27 @@
+.buttomsPages {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+buttom {
+    width: 90px;
+    height: 30px;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #efefef;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.473);
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+buttom:hover {
+    background-color: #bcbcbc;
+}

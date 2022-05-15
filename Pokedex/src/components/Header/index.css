@@ -1,0 +1,100 @@
+header {
+    background: #b71c1c;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 180px;
+    align-items: center;
+  }
+
+.charmander {
+  height: 160px;
+  margin-left: 40px;
+  }
+  
+.pikachu {
+  height: 160px;
+  margin-right: 50px;
+}
+  
+.pokedex {
+  height: 140px;
+}
+  
+@media only screen and (max-width: 950px) {
+  .charmander {
+    height: 120px;
+  }
+  .pikachu {
+    height: 120px;
+  }
+  .pokedex {
+    height: 100px;
+  }
+  header {
+    height: 140px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .charmander {
+    height: 0;
+  }
+  .pikachu {
+    height: 0;
+  }
+  .pokedex {
+    height: 140px;
+  }
+  header {
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .charmander {
+    height: 0;
+  }
+  .pikachu {
+    height: 0;
+  }
+  .pokedex {
+    height: 100px;
+  }
+  header {
+    height: 160px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .charmander {
+    height: 0;
+  }
+  .pikachu {
+    height: 0;
+  }
+  .pokedex {
+    height: 60px;
+  }
+  header {
+    height: 120px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  
+  .charmander {
+    height: 200px;
+  }
+  .pikachu {
+    height: 200px;
+  }
+  .pokedex {
+    height: 180px;
+  }
+  header {
+    height: 240px;
+  }
+
+}
