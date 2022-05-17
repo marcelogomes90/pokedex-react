@@ -8,11 +8,23 @@ function Modal(props) {
 
     const [idsModal, setIdsModal] = useState([]);
     const [namesModal, setNamesModal] = useState([]);
+    const [typesModal, setTypesModal] = useState([]);
+    const [species, setSpecies] = useState([]);
+    const [height, setHeight] = useState();
+    const [weight, setWeight] = useState();
+    const [experience, setExpirience] = useState();
+    const [abilities, setAbilities] = useState([]);
 
     useEffect(() => {
         api.get(props.namePoke).then(({data}) => {
             setIdsModal(data.id);
             setNamesModal(data.name);
+            setTypesModal(data.types);
+            setSpecies(data.species);
+            setHeight(data.height);
+            setWeight(data.weight);
+            setExpirience(data.base_experience);
+            setAbilities(data.abilities);
         })
     }, []);
 
@@ -24,20 +36,27 @@ function Modal(props) {
                 <img className="close-button" src={closeButton} onClick={hide}></img>
                 <img className="image-original" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${idsModal}.svg`}></img>
                 <div className="div-infos">
-                    <p className="poke-id"># 1</p>
-                    <p className="poke-name">{namesModal}</p>
-                    <p className="poke-types">grass</p>
+                    <div className="id-name">
+                        <p className="poke-id"># {idsModal}</p>
+                        <p className="poke-name">{namesModal}</p>
+                    </div>
+                    <div className="div-types">
+                        {typesModal?.map((pokemon) => (
+                            <p className="poke-types">{pokemon.type.name}</p>
+                        ))}
+                    </div>
                 </div>
             </div>
             <div className="div-stats">
                 <div className="data">
                     <h3>Pokedex Data</h3>
-                    <p>Species</p>
-                    <p>Height</p>
-                    <p>Weight</p>
-                    <p>Abilities</p>
-                    <p>other</p>
-                    <p>other1</p>
+                    <p>Especies: {species.name}</p>
+                    <p>Height: {height * 10}Cm</p>
+                    <p>Weight: {weight / 10}Kg</p>
+                    {abilities?.map((pokemon) => (
+                        <p>Abilities: {pokemon.ability.name}</p>
+                    ))}
+                    <p>Base Expirience: {experience} Points</p>
                 </div>
                 <div className="stats">
                     <h3>Base Stats</h3>
