@@ -17,6 +17,14 @@ function App() {
   const [nextPageUrl, setNextPageUrl] = useState();
   const [prevPageUrl, setPrevPageUrl] = useState();
   const [loading, setLoading] = useState(true);
+  const [namePoke, setNamePoke] = useState();
+
+  const [showModal, setShowModal] = useState(false);
+
+  function show() {
+    setShowModal(true);
+    setNamePoke('bulbasaur');
+  }
 
   useEffect(() => {
     setLoading(true);
@@ -53,13 +61,13 @@ function App() {
       
       <div className='card-area'>
         {pokemon?.map((pokecard) => (
-          <div className="card" id={`${pokecard.name}`}>
+          <div className="card" id={`${pokecard.name}`} onClick={show}>
             <CardContent pokemonName={ pokecard.name }/>
           </div>
         ))}
       </div>
 
-      <Modal />
+      {showModal ? <Modal setShowModal={setShowModal} namePoke={namePoke}/> : null}
       
       <Pagination
         gotoNextPage={nextPageUrl ? gotoNextPage : null}
