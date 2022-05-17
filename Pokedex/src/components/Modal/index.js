@@ -7,10 +7,12 @@ import closeButton from '../../assets/close-button.png'
 function Modal(props) {
 
     const [idsModal, setIdsModal] = useState([]);
+    const [namesModal, setNamesModal] = useState([]);
 
     useEffect(() => {
         api.get(props.namePoke).then(({data}) => {
             setIdsModal(data.id);
+            setNamesModal(data.name);
         })
     }, []);
 
@@ -23,7 +25,7 @@ function Modal(props) {
                 <img className="image-original" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${idsModal}.svg`}></img>
                 <div className="div-infos">
                     <p className="poke-id"># 1</p>
-                    <p className="poke-name">Bulbasaur</p>
+                    <p className="poke-name">{namesModal}</p>
                     <p className="poke-types">grass</p>
                 </div>
             </div>

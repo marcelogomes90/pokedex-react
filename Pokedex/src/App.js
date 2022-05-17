@@ -18,12 +18,12 @@ function App() {
   const [prevPageUrl, setPrevPageUrl] = useState();
   const [loading, setLoading] = useState(true);
   const [namePoke, setNamePoke] = useState();
-
   const [showModal, setShowModal] = useState(false);
 
-  function show() {
-    setShowModal(true);
-    setNamePoke('bulbasaur');
+  const show = () => setShowModal(true);
+
+  const getPokeName = (e) => {
+    setNamePoke(e.currentTarget.id);
   }
 
   useEffect(() => {
@@ -61,7 +61,7 @@ function App() {
       
       <div className='card-area'>
         {pokemon?.map((pokecard) => (
-          <div className="card" id={`${pokecard.name}`} onClick={show}>
+          <div className="card" id={`${pokecard.name}`} onClick={show} onClickCapture={getPokeName}>
             <CardContent pokemonName={ pokecard.name }/>
           </div>
         ))}
