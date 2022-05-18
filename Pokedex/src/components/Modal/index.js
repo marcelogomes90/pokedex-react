@@ -1,4 +1,4 @@
-import "../CardContent/types-colors.css"
+import "./types-colors.css"
 import "./index.css";
 import api from "../../services/api";
 import { useState, useEffect } from "react";
@@ -14,6 +14,7 @@ function Modal(props) {
     const [weight, setWeight] = useState();
     const [experience, setExpirience] = useState();
     const [abilities, setAbilities] = useState([]);
+    const [firstType, setFirstType] = useState([]);
 
     useEffect(() => {
         api.get(props.namePoke).then(({data}) => {
@@ -25,6 +26,7 @@ function Modal(props) {
             setWeight(data.weight);
             setExpirience(data.base_experience);
             setAbilities(data.abilities);
+            setFirstType(data.types);
         })
     }, []);
 
@@ -32,21 +34,23 @@ function Modal(props) {
 
     return (
         <div className="modal"> 
-            <div className="div-principal">
-                <img className="close-button" src={closeButton} onClick={hide}></img>
-                <img className="image-original" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${idsModal}.svg`}></img>
-                <div className="div-infos">
-                    <div className="id-name">
-                        <p className="poke-id"># {idsModal}</p>
-                        <p className="poke-name">{namesModal}</p>
-                    </div>
-                    <div className="div-types">
-                        {typesModal?.map((pokemon) => (
-                            <p className="poke-types">{pokemon.type.name}</p>
-                        ))}
+            {firstType.filter(pokemon => pokemon.slot == 1).map(poketype => (
+                <div className={`${poketype.type.name}-div div-principal`}>
+                    <img className="close-button" src={closeButton} onClick={hide}></img>
+                    <img className="image-original" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${idsModal}.svg`}></img>
+                    <div className="div-infos">
+                        <div className="id-name">
+                            <p className="poke-id"># {idsModal}</p>
+                            <p className="poke-name">{namesModal}</p>
+                        </div>
+                        <div className="div-types">
+                            {typesModal?.map((pokemon) => (
+                                <p className={`${pokemon.type.name}-modal poke-types`}>{pokemon.type.name}</p>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
+            ))}
             <div className="div-stats">
                 <div className="data">
                     <h3>Pokedex Data</h3>
