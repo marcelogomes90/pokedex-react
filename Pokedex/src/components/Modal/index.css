@@ -18,7 +18,7 @@
 }
 
 .div-principal {
-    height: 360px;
+    height: 340px;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -78,9 +78,7 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
     margin: 0;
@@ -116,15 +114,81 @@
     font-size: 26px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1400px) {
     .div-principal {
-        display: flex;
-        height: 260px;
+        height: 250px;
+    }
+
+    .image-original {
+        height: 180px;
+        width: 180px;
+    }
+
+    .poke-id {
+        font-size: 24px;
+    }
+    
+    .poke-name {
+        font-size: 24px;
+    }
+
+    .data h3 {
+        font-size: 22px;
+    }
+
+    .stats h3 {
+        font-size: 22px;
+    }
+    
+    .data p {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    
+    .stats p {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .close-button {
+        height: 36px;
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .div-principal {
+        height: 210px;
     }
 
     .image-original {
         height: 170px;
         width: 170px;
+    }
+
+    .poke-id {
+        font-size: 22px;
+    }
+    
+    .poke-name {
+        font-size: 22px;
+    }
+
+    .close-button {
+        height: 36px;
+        width: 32px;
+    }
+}
+    
+
+@media only screen and (max-width: 700px) {
+    .div-principal {
+        height: 200px;
+    }
+
+    .image-original {
+        height: 160px;
+        width: 160px;
     }
 
     .poke-id {
@@ -140,11 +204,11 @@
         width: 33px;
     }
     
-  }
+}
 
 @media only screen and (max-width: 575px) {
     .div-principal {
-        height: 320px;
+        height: 280px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -154,8 +218,8 @@
     }
     
     .image-original {
-        height: 150px;
-        width: 150px;
+        height: 130px;
+        width: 130px;
     }
 
     .poke-id {
@@ -206,13 +270,14 @@
     }
     
     .data h3 {
-        font-size: 20px;
+        font-size: 18px;
+        margin-top: 10px;
     }
     
     .data p {
-        margin-top: 8px;
-        margin-bottom: 8px;
-        font-size: 14px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 12px;
     }
     
     .stats {
@@ -221,14 +286,62 @@
     }
     
     .stats p {
-        margin-top: 8px;
-        margin-bottom: 8px;
-        font-size: 14px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 12px;
     }
     
     .stats h3 {
-        font-size: 20px;
+        font-size: 18px;
+        margin-top: 10px;
     }
-  }
+}
 
+@media only screen and (max-height: 700px) and (max-width: 600px){
+    .div-principal {
+        height: 220px;
+    }
+
+    .image-original {
+        height: 90px;
+        width: 90px;
+    }
+
+    .poke-id {
+        font-size: 16px;  
+    }
+    
+    .poke-name {
+        font-size: 16px;
+    }
+
+    .poke-types {
+        color: #fafafa;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .div-principal {
+        height: 190px;
+    }
+
+    .image-original {
+        height: 80px;
+        width: 80px;
+    }
+    
+    .poke-id {
+        font-size: 15px;  
+    }
+    
+    .poke-name {
+        font-size: 15px;
+    }
+
+    .poke-types {
+        color: #fafafa;
+        font-size: 12px;
+    }
+}
   
