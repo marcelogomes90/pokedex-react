@@ -114,6 +114,29 @@
     font-size: 26px;
 }
 
+.hp {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15px;
+    margin: 0;
+}
+
+.hp-bar {
+    border: solid 1px;
+    background-color: transparent;
+    width: 300px;
+    height: 28px;
+    border-radius: 20px;
+}
+
+.hp-color {
+    width: 50%;
+    background-color: black;
+    border-radius: 20px;
+}
+
 @media only screen and (max-width: 1400px) {
     .div-principal {
         height: 250px;
