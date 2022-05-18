@@ -80,9 +80,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    margin: 0;
 }
 
 .data {
@@ -90,9 +91,29 @@
     margin-left: 50px;
 }
 
+.data h3 {
+    font-size: 26px;
+}
+
+.data p {
+    margin-top: 30px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
 .stats {
     margin-right: 50px;
     margin-left: 50px;
+}
+
+.stats p {
+    margin-top: 30px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.stats h3 {
+    font-size: 26px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -121,9 +142,9 @@
     
   }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 575px) {
     .div-principal {
-        height: 330px;
+        height: 320px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -172,6 +193,41 @@
         margin-right: 0;
         margin-left: 5px;
         margin-right: 5px;
+    }
+
+    .div-stats {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .data {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    
+    .data h3 {
+        font-size: 20px;
+    }
+    
+    .data p {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+    
+    .stats {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    
+    .stats p {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+    
+    .stats h3 {
+        font-size: 20px;
     }
   }
 

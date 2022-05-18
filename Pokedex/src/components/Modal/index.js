@@ -15,6 +15,7 @@ function Modal(props) {
     const [experience, setExpirience] = useState();
     const [abilities, setAbilities] = useState([]);
     const [firstType, setFirstType] = useState([]);
+    const [stats, setStats] = useState([]);
 
     useEffect(() => {
         api.get(props.namePoke).then(({data}) => {
@@ -27,6 +28,8 @@ function Modal(props) {
             setExpirience(data.base_experience);
             setAbilities(data.abilities);
             setFirstType(data.types);
+            setStats(data.stats);
+            console.log(stats);
         })
     }, []);
 
@@ -54,22 +57,34 @@ function Modal(props) {
             <div className="div-stats">
                 <div className="data">
                     <h3>Pokedex Data</h3>
-                    <p>Especies: {species.name}</p>
-                    <p>Height: {height * 10}Cm</p>
-                    <p>Weight: {weight / 10}Kg</p>
+                    <p><b>Especies:</b> {species.name}</p>
+                    <p><b>Height:</b> {height * 10}Cm</p>
+                    <p><b>Weight:</b> {weight / 10}Kg</p>
                     {abilities?.map((pokemon) => (
-                        <p>Abilities: {pokemon.ability.name}</p>
+                        <p><b>Abilitie:</b> {pokemon.ability.name}</p>
                     ))}
-                    <p>Base Expirience: {experience} Points</p>
+                    <p><b>Base Experience:</b> {experience} Points</p>
                 </div>
                 <div className="stats">
                     <h3>Base Stats</h3>
-                    <p>hp</p>
-                    <p>attack</p>
-                    <p>defense</p>
-                    <p>special attack</p>
-                    <p>special defense</p>
-                    <p>speed</p>
+                    {stats.filter(pokemon => pokemon.stat.name == 'hp').map(pokestats => (
+                        <p><b>HP:</b> {pokestats.base_stat}</p>
+                    ))}
+                    {stats.filter(pokemon => pokemon.stat.name == 'attack').map(pokestats => (
+                        <p><b>Attack:</b> {pokestats.base_stat}</p>
+                    ))}
+                    {stats.filter(pokemon => pokemon.stat.name == 'defense').map(pokestats => (
+                        <p><b>Defense:</b> {pokestats.base_stat}</p>
+                    ))}
+                    {stats.filter(pokemon => pokemon.stat.name == 'special-attack').map(pokestats => (
+                        <p><b>Special-Attack:</b> {pokestats.base_stat}</p>
+                    ))}
+                    {stats.filter(pokemon => pokemon.stat.name == 'special-defense').map(pokestats => (
+                        <p><b>Special-Defense:</b> {pokestats.base_stat}</p>
+                    ))}
+                    {stats.filter(pokemon => pokemon.stat.name == 'speed').map(pokestats => (
+                        <p><b>Speed:</b> {pokestats.base_stat}</p>
+                    ))}
                 </div>
             </div>
         </div>
