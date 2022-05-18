@@ -67,9 +67,14 @@ function Modal(props) {
                 </div>
                 <div className="stats">
                     <h3>Base Stats</h3>
-                    {stats.filter(pokemon => pokemon.stat.name == 'hp').map(pokestats => (
-                        <p><b>HP:</b> {pokestats.base_stat}</p>
-                    ))}
+                    <div className="hp">
+                        <p><b>HP:</b></p>
+                        {stats.filter(pokemon => pokemon.stat.name == 'hp').map(pokestats => (
+                            <p>{pokestats.base_stat}</p>
+                        ))}
+                        <div className="hp-color"><div className="hp-bar"></div></div>
+                    </div>
+                    
                     {stats.filter(pokemon => pokemon.stat.name == 'attack').map(pokestats => (
                         <p><b>Attack:</b> {pokestats.base_stat}</p>
                     ))}
