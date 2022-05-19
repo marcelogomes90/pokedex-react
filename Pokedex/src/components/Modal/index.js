@@ -113,7 +113,6 @@ function Modal(props) {
                         ))}
                         <div className="colorbar"><div className="bar"></div></div>
                     </div>
-
                 </div>
             </div>
         </div>
