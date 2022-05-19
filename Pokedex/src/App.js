@@ -12,8 +12,9 @@ import Modal from './components/Modal'
 
 function App() {
 
+  const [search, setSearch] = useState('?offset=0&limit=12')
   const [pokemon, setPokemon] = useState([]);
-  const [currentPageUrl, setCurrentPageUrl] = useState("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=12");
+  const [currentPageUrl, setCurrentPageUrl] = useState(`https://pokeapi.co/api/v2/pokemon/${search}`);
   const [nextPageUrl, setNextPageUrl] = useState();
   const [prevPageUrl, setPrevPageUrl] = useState();
   const [loading, setLoading] = useState(true);
@@ -57,7 +58,7 @@ function App() {
 
       <><Header /></>
       
-      <><Search /></>
+      <><Search setSearch={setSearch}/></>
       
       <div className='card-area'>
         {pokemon?.map((pokecard) => (
