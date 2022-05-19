@@ -343,7 +343,6 @@
 @media only screen and (min-width: 1400px) {
     .electric-bg {
         background-color: #fff59d;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -352,7 +351,6 @@
     
     .grass-bg {
         background-color: #a5d6a7;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -361,7 +359,6 @@
     
     .poison-bg {
         background-color: #b39ddb;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -370,7 +367,6 @@
     
     .bug-bg {
         background-color: #e6ee9c;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -379,7 +375,6 @@
     
     .normal-bg {
         background-color: #d7ccc8;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -388,7 +383,6 @@
     
     .flying-bg {
         background-color: #b2dfdb;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -397,7 +391,6 @@
     
     .ground-bg {
         background-color: #bcaaa4;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -406,7 +399,6 @@
     
     .fire-bg {
         background-color: #ffab91;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -415,7 +407,6 @@
     
     .water-bg {
         background-color: #bbdefb;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -424,7 +415,6 @@
     
     .fairy-bg {
         background-color: #f8bbd0;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -433,7 +423,6 @@
     
     .rock-bg {
         background-color: #c2c2c2;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -442,7 +431,6 @@
     
     .fighting-bg {
         background-color: #d1c4e9;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -451,7 +439,6 @@
     
     .ghost-bg {
         background-color: #9fa8da;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -460,7 +447,6 @@
     
     .dark-bg {
         background-color: #a4a4a4;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -469,7 +455,6 @@
     
     .psychic-bg {
         background-color: #ffffb3;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -478,7 +463,6 @@
     
     .ice-bg {
         background-color: #b2ebf2;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -487,7 +471,6 @@
     
     .steel-bg {
         background-color: #cfd8dc;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
@@ -496,7 +479,6 @@
     
     .dragon-bg {
         background-color: #ffcc80;
-        border-radius: 100%;
         margin-top: 40px;
         margin-bottom: 30px;
         width: 190px;
