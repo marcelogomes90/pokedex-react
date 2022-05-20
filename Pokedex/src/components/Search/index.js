@@ -1,12 +1,10 @@
 import './index.css'
 
-function Search(props) {
-
-    let textSearch;
+function Search() {
 
     const handleChange = (e) => {
-        textSearch = e.target.value;
-        props.setCurrentPageUrl(`https://pokeapi.co/api/v2/pokemon/${textSearch}`)
+        let textSearch = e.target.value;
+        console.log(textSearch);
     }
     
     return (

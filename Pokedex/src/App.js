@@ -49,8 +49,6 @@ function App() {
 
   if (loading) return;
 
-  console.log(currentPageUrl);
-
   return (
     <div className="App">
 
