@@ -4,9 +4,9 @@ import './index.css'
 
 function Pagination({ gotoNextPage, gotoPrevPage }) {
   return (
-    <div className='buttomsPages'>
-      {gotoPrevPage && <buttom className="buttomPrev" onClick={gotoPrevPage}>Anterior</buttom>}
-      {gotoNextPage && <buttom className="buttomNext" onClick={gotoNextPage}>Próxima</buttom>}
+    <div className='buttonsPages'>
+      {gotoPrevPage && <button className="buttonPrev" onClick={gotoPrevPage}>Anterior</button>}
+      {gotoNextPage && <button className="buttonNext" onClick={gotoNextPage}>Próxima</button>}
     </div>
   )
 }

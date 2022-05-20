@@ -60,7 +60,7 @@ function Modal(props) {
                     <p><b>Height:</b> {height * 10}Cm</p>
                     <p><b>Weight:</b> {weight / 10}Kg</p>
                     {abilities?.map((pokemon) => (
-                        <p><b>Abilitie:</b> {pokemon.ability.name}</p>
+                        <p ><b>Abilitie:</b> {pokemon.ability.name}</p>
                     ))}
                     <p><b>Base Experience:</b> {experience}</p>
                 </div>
@@ -69,49 +69,61 @@ function Modal(props) {
                     <div className="stats-bar">
                         <p className="stats-name"><b>Health:</b></p>
                         {stats.filter(pokemon => pokemon.stat.name == 'hp').map(pokestats => (
-                            <p className="stats-numbers">{pokestats.base_stat}</p>
+                            <>
+                                <p className="stats-numbers">{pokestats.base_stat}</p>
+                                <div style={{width: `${pokestats.base_stat/4}%`,  backgroundColor: "#e53935", borderRadius: "20px"}}><div className="bar"></div></div>
+                            </>
                         ))}
-                        <div className="colorbar"><div className="bar"></div></div>
                     </div>
 
                     <div className="stats-bar">
                         <p className="stats-name"><b>Attack:</b></p>
                         {stats.filter(pokemon => pokemon.stat.name == 'attack').map(pokestats => (
-                            <p className="stats-numbers">{pokestats.base_stat}</p>
+                            <>
+                                <p className="stats-numbers">{pokestats.base_stat}</p>
+                                <div style={{width: `${pokestats.base_stat/4}%`,  backgroundColor: "#fb8c00", borderRadius: "20px"}}><div className="bar"></div></div>
+                            </>
                         ))}
-                        <div className="colorbar"><div className="bar"></div></div>
                     </div>
                     
                     <div className="stats-bar">
                         <p className="stats-name"><b>Defense:</b></p>
                         {stats.filter(pokemon => pokemon.stat.name == 'defense').map(pokestats => (
-                            <p className="stats-numbers">{pokestats.base_stat}</p>
+                            <>
+                                <p className="stats-numbers">{pokestats.base_stat}</p>
+                                <div style={{width: `${pokestats.base_stat/4}%`,  backgroundColor: "#fdd835", borderRadius: "20px"}}><div className="bar"></div></div>
+                            </>
                         ))}
-                        <div className="colorbar"><div className="bar"></div></div>
                     </div>
 
                     <div className="stats-bar">
                         <p className="stats-name"><b>Sp. Attack:</b></p>
                         {stats.filter(pokemon => pokemon.stat.name == 'special-attack').map(pokestats => (
-                            <p className="stats-numbers">{pokestats.base_stat}</p>
+                            <>
+                                <p className="stats-numbers">{pokestats.base_stat}</p>
+                                <div style={{width: `${pokestats.base_stat/4}%`,  backgroundColor: "#1e88e5", borderRadius: "20px"}}><div className="bar"></div></div>
+                            </>
                         ))}
-                        <div className="colorbar"><div className="bar"></div></div>
                     </div>
 
                     <div className="stats-bar">
                         <p className="stats-name"><b>Sp. Defense:</b></p>
                         {stats.filter(pokemon => pokemon.stat.name == 'special-defense').map(pokestats => (
-                            <p className="stats-numbers">{pokestats.base_stat}</p>
+                            <>
+                                <p className="stats-numbers">{pokestats.base_stat}</p>
+                                <div style={{width: `${pokestats.base_stat/4}%`,  backgroundColor: "#43a047", borderRadius: "20px"}}><div className="bar"></div></div>
+                            </>
                         ))}
-                        <div className="colorbar"><div className="bar"></div></div>
                     </div>
 
                     <div className="stats-bar">
                         <p className="stats-name"><b>Speed:</b></p>
                         {stats.filter(pokemon => pokemon.stat.name == 'speed').map(pokestats => (
-                            <p className="stats-numbers">{pokestats.base_stat}</p>
+                            <>
+                                <p className="stats-numbers">{pokestats.base_stat}</p>
+                                <div style={{width: `${pokestats.base_stat/4}%`,  backgroundColor: "#ec407a", borderRadius: "20px"}}><div className="bar"></div></div>
+                            </>
                         ))}
-                        <div className="colorbar"><div className="bar"></div></div>
                     </div>
                 </div>
             </div>

@@ -1,13 +1,15 @@
-.buttomsPages {
+.buttonsPages {
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
     justify-content: center;
+    align-items: center;
   }
 
-buttom {
-    width: 90px;
-    height: 30px;
+button {
+    width: 100px;
+    height: 40px;
+    text-align: center;
     font-size: 14px;
     margin-left: 5px;
     margin-right: 5px;
@@ -17,11 +19,9 @@ buttom {
     border-radius: 10px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.473);
     cursor: pointer;
-    text-align: center;
-    padding-top: 10px;
     font-weight: bold;
 }
 
-buttom:hover {
+button:hover {
     background-color: #bcbcbc;
 }

@@ -3,13 +3,10 @@ import { useState } from 'react';
 
 function Search(props) {
 
-    const [searchContent, setSearchContent] = useState();
-
     const handleChange = (event) => {
-        setSearchContent(event.target.value);
-        props.setSearch(searchContent);
+        props.setSearch(event.target.value);
     }
-    
+
     return (
         <>
             <div className='search'>
