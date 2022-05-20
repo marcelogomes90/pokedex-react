@@ -12,7 +12,7 @@ import Modal from './components/Modal'
 
 function App() {
 
-  const [search, setSearch] = useState('?offset=0&limit=12')
+  const [search, setSearch] = useState('?offset=0&limit=12');
   const [pokemon, setPokemon] = useState([]);
   const [currentPageUrl, setCurrentPageUrl] = useState(`https://pokeapi.co/api/v2/pokemon/${search}`);
   const [nextPageUrl, setNextPageUrl] = useState();
@@ -20,6 +20,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [namePoke, setNamePoke] = useState();
   const [showModal, setShowModal] = useState(false);
+  const [pokemonName, setPokemonName] = useState([]);
 
   const show = () => setShowModal(true);
 
@@ -36,6 +37,7 @@ function App() {
         setNextPageUrl(res.data.next);
         setPrevPageUrl(res.data.previous);
         setPokemon(res.data.results);
+        setPokemonName(res.data.name);
     });
 
   }, [currentPageUrl]);
@@ -50,16 +52,18 @@ function App() {
 
   if (loading) return;
 
+  console.log(currentPageUrl);
+
   return (
     <div className="App">
 
       <><Header /></>
       
-      <><Search setSearch={setSearch}/></>
+      <><Search setSearch={ setSearch } /></>
       
-      <div className='card-area'>
-        {pokemon?.map((pokecard) => (
-          <div className="card" id={`${pokecard.name}`} onClick={show} onClickCapture={getPokeName}>
+      <div className='card-area'> 
+        {pokemon?.map((pokecard) => ( 
+          <div key={`${pokecard.name}`} className="card" id={`${pokecard.name}`} onClick={show} onClickCapture={getPokeName}>
             <CardContent pokemonName={ pokecard.name }/>
           </div>
         ))}
