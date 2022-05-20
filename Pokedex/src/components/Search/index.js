@@ -1,10 +1,12 @@
 import './index.css'
-import { useState } from 'react';
 
 function Search(props) {
 
-    const handleChange = (event) => {
-        props.setSearch(event.target.value);
+    let textSearch;
+
+    const handleChange = (e) => {
+        textSearch = e.target.value;
+        props.setSearch(textSearch)
     }
 
     return (
