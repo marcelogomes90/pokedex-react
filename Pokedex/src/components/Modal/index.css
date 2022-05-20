@@ -426,7 +426,7 @@
     }
 }
 
-@media only screen and (max-width: 950px) and (min-height: 750px) {
+@media only screen and (max-width: 950px) and (min-height: 930px) {
     .stats-bar {
         height: 40px;
     }
