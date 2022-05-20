@@ -78,9 +78,8 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    align-items: center;
     padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
     margin: 0;
 }
 
@@ -129,7 +128,7 @@
     column-gap: 10px;
     margin: 0;
     padding: 0;
-    height: 55px;
+    height: 50px;
 }
 
 .bar {
@@ -137,12 +136,6 @@
     background-color: transparent;
     width: 170px;
     height: 14px;
-    border-radius: 20px;
-}
-
-.colorbar {
-    width: 15%;
-    background-color: #00701a;
     border-radius: 20px;
 }
 
@@ -433,7 +426,7 @@
     }
 }
 
-@media only screen and (max-width: 950px) and (min-height: 1000px) {
+@media only screen and (max-width: 950px) and (min-height: 750px) {
     .stats-bar {
         height: 40px;
     }

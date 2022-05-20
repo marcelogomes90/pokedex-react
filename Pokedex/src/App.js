@@ -29,9 +29,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    let cancel;
-    axios.get(currentPageUrl, {
-        cancelToken: new axios.CancelToken(c => (cancel = c))
+    axios.get(currentPageUrl, { 
     })
     .then(res => {
         setLoading(false);
@@ -40,7 +38,6 @@ function App() {
         setPokemon(res.data.results);
     });
 
-    return () => cancel();
   }, [currentPageUrl]);
 
   function gotoNextPage() {
