@@ -6,9 +6,9 @@ function Search(props) {
 
     const handleChange = (e) => {
         textSearch = e.target.value;
-        props.setSearch(textSearch)
+        props.setCurrentPageUrl(`https://pokeapi.co/api/v2/pokemon/${textSearch}`)
     }
-
+    
     return (
         <>
             <div className='search'>
