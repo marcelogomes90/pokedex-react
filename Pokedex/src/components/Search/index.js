@@ -1,18 +1,53 @@
 import './index.css'
 
-function Search() {
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-    const handleChange = (e) => {
-        let textSearch = e.target.value;
-        console.log(textSearch);
+import CardContent from '../CardContent';
+import Modal from '../Modal';
+
+function Search(props) {
+
+    const [nameofPokemon, setNameofPokemon] = useState('');
+    const [showModal, setShowModal] = useState(false);
+   
+    const show = () => setShowModal(true);
+
+    const getPokeName = (e) => {
+        setNameofPokemon(e.currentTarget.id);
     }
-    
+
+    useEffect(() => {
+
+        async function getData() {
+
+            try {
+      
+              let res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${props.find}`);
+              setNameofPokemon(res.data.name);
+      
+            } catch (error) {
+      
+              alert("pokemon doesn't exist");
+              Location.reload();
+            }
+      
+          }
+      
+          getData();
+
+    }, [props.find]);
+
     return (
         <>
-            <div className='search'>
-                <p className='input-title'>Capture o seu Pokemon!</p>
-                <input placeholder='Digite o nome ou o id do pokemon' type='text' onChange={handleChange}></input>
+            <div className='card-area'> 
+                <div key={`${nameofPokemon}`} className="card" id={`${nameofPokemon}`} onClick={show} onClickCapture={getPokeName}>
+                    <CardContent pokemonName={ nameofPokemon }/>
+                </div>
             </div>
+        
+
+            {showModal ? <Modal setShowModal={setShowModal} namePoke={nameofPokemon}/> : null}
         </>
     )
 }

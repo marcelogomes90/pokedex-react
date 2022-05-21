@@ -1,75 +1,43 @@
 import './App.css';
+import pokeball from './assets/pokebola.png'
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Search from './components/Search';
-import CardContent from './components/CardContent';
-import Pagination from './components/Pagination';
-import Modal from './components/Modal'
+import Card from './components/Card';
 
 function App() {
 
-  const [pokemon, setPokemon] = useState([]);
-  const [currentPageUrl, setCurrentPageUrl] = useState(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=12`);
-  const [nextPageUrl, setNextPageUrl] = useState();
-  const [prevPageUrl, setPrevPageUrl] = useState();
-  const [loading, setLoading] = useState(true);
-  const [namePoke, setNamePoke] = useState();
-  const [showModal, setShowModal] = useState(false);
+  const [name, setName] = useState("");
+  const [find, setFind] = useState("");
+  const [searching, setSearching] = useState(false);
 
-  const show = () => setShowModal(true);
+  const Typename = (event) => {
+    setName(event.target.value);
+  };
 
-  const getPokeName = (e) => {
-    setNamePoke(e.currentTarget.id);
-  }
-
-  useEffect(() => {
-    setLoading(true);
-    axios.get(currentPageUrl, { 
-    })
-    .then(res => {
-        setLoading(false);
-        setNextPageUrl(res.data.next);
-        setPrevPageUrl(res.data.previous);
-        setPokemon(res.data.results);
-    });
-
-  }, [currentPageUrl]);
-
-  function gotoNextPage() {
-    setCurrentPageUrl(nextPageUrl);
-  }
-
-  function gotoPrevPage() {
-    setCurrentPageUrl(prevPageUrl);
-  }
-
-  if (loading) return;
+  const search = () => {
+    if (name !== "") setFind(name);
+    setName("");
+    setSearching(true);
+};
 
   return (
     <div className="App">
 
       <><Header /></>
       
-      <><Search setCurrentPageUrl={ setCurrentPageUrl } /></>
-      
-      <div className='card-area'> 
-        {pokemon?.map((pokecard) => ( 
-          <div key={`${pokecard.name}`} className="card" id={`${pokecard.name}`} onClick={show} onClickCapture={getPokeName}>
-            <CardContent pokemonName={ pokecard.name }/>
-          </div>
-        ))}
+      <div className='search'>
+        <p className='input-title'>Catch your pokemon!</p>
+        <input placeholder='Search by pokemon name or id' type='text' onChange={Typename} value={name}></input>
+        <button classname="pokeball" type='submit' onClick={search}><img className="pokeball-img" src={pokeball}></img></button>
       </div>
 
-      {showModal ? <Modal setShowModal={setShowModal} namePoke={namePoke}/> : null}
-      
-      <Pagination
-        gotoNextPage={nextPageUrl ? gotoNextPage : null}
-        gotoPrevPage={prevPageUrl ? gotoPrevPage : null}
-      />
+      {!searching && <><Card /></> }
+
+      {searching && <><Search name={name} find={find} /></>}
       
       <><Footer /></>
 
