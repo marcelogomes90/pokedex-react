@@ -16,10 +16,11 @@ function App() {
 
   const Typename = (event) => {
     setName(event.target.value);
+    
   };
 
   const search = () => {
-    if (name !== "") setFind(name);
+    if (name !== "") setFind(name.toLowerCase());
     setName("");
     setSearching(true);
 };
@@ -28,16 +29,16 @@ function App() {
     <div className="App">
 
       <><Header /></>
-      
+
+      <p className='input-title'>Catch your pokemon!</p>
       <div className='search'>
-        <p className='input-title'>Catch your pokemon!</p>
         <input placeholder='Search by pokemon name or id' type='text' onChange={Typename} value={name}></input>
-        <button classname="pokeball" type='submit' onClick={search}><img className="pokeball-img" src={pokeball}></img></button>
+        <button className="pokeball" type='submit' onClick={search}><img className="pokeball-img" src={pokeball}></img></button>
       </div>
 
       {!searching && <><Card /></> }
 
-      {searching && <><Search name={name} find={find} /></>}
+      {searching && <><Search name={name} find={find} setSearching={setSearching}/></>}
       
       <><Footer /></>
 

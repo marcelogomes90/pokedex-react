@@ -12,8 +12,6 @@ function CardContent(props) {
 
     useEffect(() => {
 
-        async function getData() {
-
         api.get(props.pokemonName).then(({data}) => {
             setTypes(data.types);
             setIds(data.id);
@@ -21,19 +19,18 @@ function CardContent(props) {
             setFirstType(data.types);
         })
 
-        }
-
-        getData();
-
     }, []);
 
     return (
+        
         <>
+            
             {firstType?.filter(pokemon => pokemon.slot == 1).map(poketype => (
                 <div className={`${poketype.type.name}-bg`}>
                     <img className="pokemon-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${ids}.svg`}></img>
                 </div>   
             ))}
+
             <div className="pokemon-info">
                 <p className='pokemon-id'>{`${ids}.`}</p>
                 <p className='pokemon-name'>{names}</p>
@@ -43,7 +40,9 @@ function CardContent(props) {
                     <p className={`${pokemon.type.name}`}>{pokemon.type.name}</p>  
                 ))}
             </div>
+
         </>
+        
     )
 }
 

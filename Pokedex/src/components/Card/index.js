@@ -46,6 +46,7 @@ function Card() {
 
     return (
         <>
+            
             <div className='card-area'> 
                 {pokemon?.map((pokecard) => ( 
                     <div key={`${pokecard.name}`} className="card" id={`${pokecard.name}`} onClick={show} onClickCapture={getPokeName}>
@@ -54,14 +55,13 @@ function Card() {
                 ))}
             </div>
         
-
             {showModal ? <Modal setShowModal={setShowModal} namePoke={namePoke}/> : null}
 
             <Pagination
                 gotoNextPage={nextPageUrl ? gotoNextPage : null}
                 gotoPrevPage={prevPageUrl ? gotoPrevPage : null}
             />
-
+            
         </>
     );
 }
