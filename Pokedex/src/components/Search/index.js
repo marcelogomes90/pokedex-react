@@ -28,8 +28,8 @@ function Search(props) {
       
             } catch (error) {
       
-              alert("pokemon doesn't exist");
-              Location.reload();
+              alert('Pokemon not found, try again!')
+              props.setSearching(false);
             }
       
           }
@@ -42,7 +42,7 @@ function Search(props) {
         <>
             <div className='card-area'> 
                 <div key={`${nameofPokemon}`} className="card" id={`${nameofPokemon}`} onClick={show} onClickCapture={getPokeName}>
-                    <CardContent pokemonName={ nameofPokemon }/>
+                    <CardContent pokemonName={ nameofPokemon } />
                 </div>
             </div>
         

@@ -9,18 +9,29 @@ body {
 .pokeball {
   background-color: transparent;
   border: transparent;
-  border-radius: 25%;
-  height: 40px;
-  width: 40px;
+  text-align: center;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pokeball:hover .pokeball-img:hover {
+  height: 36px;
+  width: 36px;
+}
+
+.pokeball:active .pokeball-img:active {
+  height: 32px;
+  width: 32px;
 }
 
 .pokeball-img {
-  height: 40px;
-  width: 40px;
+  height: 34px;
+  width: 34px;
 }
 
 input {
-  margin-bottom: 30px;
   width: 310px;
   height: 32px;
   border: transparent;
@@ -38,13 +49,15 @@ input {
   font-weight: bold;
   margin-bottom: 15px;
   margin-top: 30px;
+  text-align: center;
 }
 
 .search {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 @media only screen and (max-width: 450px) {
