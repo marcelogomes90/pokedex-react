@@ -39,7 +39,7 @@ function Modal(props) {
             {firstType.filter(pokemon => pokemon.slot == 1).map(poketype => (
                 <div className={`${poketype.type.name}-div div-principal`}>
                     <img className="close-button" src={closeButton} onClick={hide}></img>
-                    <img className="image-original" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${idsModal}.png`}></img>
+                    <img className="image-original" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${idsModal}.png`}></img>
                     <div className="div-infos">
                         <div className="id-name">
                             <p className="poke-id"># {idsModal}</p>
