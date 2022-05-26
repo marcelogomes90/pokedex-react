@@ -27,7 +27,7 @@ function CardContent(props) {
             
             {firstType?.filter(pokemon => pokemon.slot == 1).map(poketype => (
                 <div className={`${poketype.type.name}-bg`}>
-                    <img className="pokemon-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${ids}.png`}></img>
+                    <img className="pokemon-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${ids}.png`}></img>
                 </div>   
             ))}
 
