@@ -24,6 +24,7 @@ function CardContainer() {
       setNextPageUrl(res.data.next);
       setPrevPageUrl(res.data.previous);
       setPokemons(res.data.results);
+      window.scrollTo(0, 0);
     });
   }, [currentPageUrl]);
 

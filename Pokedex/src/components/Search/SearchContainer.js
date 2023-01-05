@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import Search from "./Search";
@@ -27,7 +27,7 @@ function SearchContainer() {
 
   const handleShowModal = () => setShowModal(true);
 
-  async function getData() {
+  const getData = useCallback(async () => {
     try {
       setLoading(true);
       let res = await axios.get(
@@ -39,12 +39,12 @@ function SearchContainer() {
       toast.error("Name or id not found, try again!");
     }
     setLoading(false);
-  }
+  }, [findPokemon]);
 
   console.log(loading);
   useEffect(() => {
     getData();
-  }, [findPokemon]);
+  }, [findPokemon, getData]);
 
   return (
     <>
