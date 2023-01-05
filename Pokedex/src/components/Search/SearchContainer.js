@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import Search from "./Search";
 
@@ -8,6 +9,7 @@ function SearchContainer() {
   const [searchName, setSearchName] = useState("");
   const [findPokemon, setFindPokemon] = useState("");
   const [searching, setSearching] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleOnChangeSearch = (event) => {
     setSearchName(event.target.value);
@@ -25,31 +27,40 @@ function SearchContainer() {
 
   const handleShowModal = () => setShowModal(true);
 
-  useEffect(() => {
-    async function getData() {
-      try {
-        let res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${findPokemon}`);
-        setPokemonName(res.data.name);
-      } catch (error) {
-        alert("Name or id not found, try again!");
-        setSearching(false);
-      }
+  async function getData() {
+    try {
+      setLoading(true);
+      let res = await axios.get(
+        `https://pokeapi.co/api/v2/pokemon/${findPokemon}`
+      );
+      setPokemonName(res.data.name);
+    } catch (error) {
+      setSearching(false);
+      toast.error("Name or id not found, try again!");
     }
+    setLoading(false);
+  }
 
+  console.log(loading);
+  useEffect(() => {
     getData();
   }, [findPokemon]);
 
   return (
-    <Search
-      handleOnChangeSearch={handleOnChangeSearch}
-      pokemonName={pokemonName}
-      searchName={searchName}
-      showModal={showModal}
-      handleShowModal={handleShowModal}
-      searching={searching}
-      searchPokemon={searchPokemon}
-      setShowModal={setShowModal}
-    />
+    <>
+      <Search
+        handleOnChangeSearch={handleOnChangeSearch}
+        pokemonName={pokemonName}
+        searchName={searchName}
+        showModal={showModal}
+        handleShowModal={handleShowModal}
+        searching={searching}
+        searchPokemon={searchPokemon}
+        setShowModal={setShowModal}
+        loading={loading}
+      />
+      <Toaster position="top-center" reverseOrder={true} />
+    </>
   );
 }
 

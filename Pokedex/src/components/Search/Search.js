@@ -1,5 +1,6 @@
 import CardContentContainer from "../CardContent/CardContentContainer";
 import pokeball from "../../assets/pokebola.png";
+import { ColorRing } from "react-loader-spinner";
 import "./index.css";
 import CardContainer from "../Card/CardContainer";
 import ModalContainer from "../Modal/ModalContainer";
@@ -13,6 +14,7 @@ function Search({
   searchName,
   searchPokemon,
   setShowModal,
+  loading,
 }) {
   return (
     <>
@@ -29,9 +31,23 @@ function Search({
         </button>
       </div>
 
-      {!searching ? (
-        <CardContainer />
-      ) : (
+      {!searching && <CardContainer />}
+
+      {searching && loading ? (
+        <div className="card-area">
+          <ColorRing
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="blocks-loading"
+            wrapperStyle={{}}
+            wrapperClass="blocks-wrapper"
+            colors={["#e15b64", "#f8b26a", "#abbd81", "#808080", "#87CEEB"]}
+          />
+        </div>
+      ) : null}
+
+      {searching && !loading ? (
         <div className="card-area">
           <div
             key={`${pokemonName}`}
@@ -42,7 +58,7 @@ function Search({
             <CardContentContainer pokemonName={pokemonName} />
           </div>
         </div>
-      )}
+      ) : null}
 
       {showModal ? (
         <ModalContainer pokemonName={pokemonName} setShowModal={setShowModal} />
