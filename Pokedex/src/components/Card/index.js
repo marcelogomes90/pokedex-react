@@ -2,7 +2,7 @@ import './index.css'
 
 import { useState, useEffect } from 'react';
 import api from '../../services/api';
-import Pagination from '../Pagination';
+import Pagination from '../Pagination/Pagination';
 import CardContent from '../CardContent';
 import Modal from '../Modal';
 

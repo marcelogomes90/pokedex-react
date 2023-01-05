@@ -1,427 +1,425 @@
 .modal {
-    background-color: #fafafa;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  background-color: #fafafa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .close-button {
-    height: 40px;
-    width: 44px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: white;
-    cursor: pointer;
+  height: 40px;
+  width: 44px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  cursor: pointer;
 }
 
 .div-principal {
-    height: 340px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .image-original {
-    margin-right: 30px;
-    margin-left: 30px;
-    height: 250px;
-    width: 250px;
+  margin-right: 30px;
+  margin-left: 30px;
+  height: 250px;
+  width: 250px;
 }
 
 .div-infos {
-    margin-right: 30px;
-    margin-left: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .id-name {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .poke-id {
-    color: #fafafa;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 5px;    
+  color: #fafafa;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5px;
 }
 
 .poke-name {
-    color: #fafafa;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 5px;
-    text-transform: capitalize;
+  color: #fafafa;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5px;
+  text-transform: capitalize;
 }
 
 .div-types {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .poke-types {
-    color: #fafafa;
-    border-radius: 20px;
-    padding: 4px 14px;
-    text-transform: capitalize;
-    text-align: center;
-    margin-right: 15px;
+  color: #fafafa;
+  border-radius: 20px;
+  padding: 4px 14px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-right: 15px;
 }
 
 .div-stats {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 10px;
-    margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  margin: 0;
 }
 
 .data {
-    margin-right: 50px;
-    margin-left: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .data h3 {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .data p {
-    margin-top: 30px;
-    text-transform: capitalize;
-    font-size: 20px;
+  margin-top: 30px;
+  text-transform: capitalize;
+  font-size: 20px;
 }
 
 .stats {
-    margin-right: 50px;
-    margin-left: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .stats p {
-    text-transform: capitalize;
-    font-size: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
 }
 
 .stats-numbers {
-    width: 30px;
+  width: 30px;
 }
 
 .stats-name {
-    width: 130px;
+  width: 130px;
 }
 
 .stats h3 {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .stats-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    column-gap: 10px;
-    margin: 0;
-    padding: 0;
-    height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 10px;
+  margin: 0;
+  padding: 0;
+  height: 45px;
 }
 
 .bar {
-    border: solid 1px;
-    background-color: transparent;
-    width: 170px;
-    height: 14px;
-    border-radius: 20px;
+  border: solid 1px;
+  background-color: transparent;
+  width: 170px;
+  height: 14px;
+  border-radius: 20px;
 }
 
 @media only screen and (max-width: 1400px) {
-    .div-principal {
-        height: 250px;
-    }
+  .div-principal {
+    height: 250px;
+  }
 
-    .image-original {
-        height: 180px;
-        width: 180px;
-    }
+  .image-original {
+    height: 180px;
+    width: 180px;
+  }
 
-    .poke-id {
-        font-size: 24px;
-    }
-    
-    .poke-name {
-        font-size: 24px;
-    }
+  .poke-id {
+    font-size: 24px;
+  }
 
-    .data h3 {
-        font-size: 22px;
-    }
+  .poke-name {
+    font-size: 24px;
+  }
 
-    .stats h3 {
-        font-size: 22px;
-    }
-    
-    .data p {
-        margin-top: 15px;
-        font-size: 16px;
-    }
-    
-    .stats p {
-        margin-top: 15px;
-        font-size: 16px;
-    }
+  .data h3 {
+    font-size: 22px;
+  }
 
-    .close-button {
-        height: 36px;
-        width: 40px;
-    }
+  .stats h3 {
+    font-size: 22px;
+  }
+
+  .data p {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+  .stats p {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+  .close-button {
+    height: 36px;
+    width: 40px;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
-    .div-principal {
-        height: 210px;
-    }
+  .div-principal {
+    height: 210px;
+  }
 
-    .image-original {
-        height: 170px;
-        width: 170px;
-    }
+  .image-original {
+    height: 170px;
+    width: 170px;
+  }
 
-    .poke-id {
-        font-size: 22px;
-    }
-    
-    .poke-name {
-        font-size: 22px;
-    }
+  .poke-id {
+    font-size: 22px;
+  }
 
-    .close-button {
-        height: 36px;
-        width: 32px;
-    }
+  .poke-name {
+    font-size: 22px;
+  }
+
+  .close-button {
+    height: 36px;
+    width: 32px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    .data h3 {
-        font-size: 18px;
-    }
+  .data h3 {
+    font-size: 18px;
+  }
 
-    .stats h3 {
-        font-size: 18px;
-    }
-    
-    .data p {
-        font-size: 14px;
-    }
-    
-    .stats p {
-        font-size: 14px;
-    }
-    
-    .stats-numbers {
-        width: 30px;
-    }
-    
-    .stats {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+  .stats h3 {
+    font-size: 18px;
+  }
 
-    .data {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+  .data p {
+    font-size: 14px;
+  }
 
-    .stats-numbers {
-        width: 20px;
-    }
-    
-    .stats-name {
-        width: 90px;
-    }
+  .stats p {
+    font-size: 14px;
+  }
+
+  .stats-numbers {
+    width: 30px;
+  }
+
+  .stats {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .data {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .stats-numbers {
+    width: 20px;
+  }
+
+  .stats-name {
+    width: 90px;
+  }
 }
-    
 
 @media only screen and (max-width: 700px) {
-    .div-principal {
-        height: 200px;
-    }
+  .div-principal {
+    height: 200px;
+  }
 
-    .image-original {
-        height: 160px;
-        width: 160px;
-    }
+  .image-original {
+    height: 160px;
+    width: 160px;
+  }
 
-    .poke-id {
-        font-size: 24px;
-    }
-    
-    .poke-name {
-        font-size: 24px;
-    }
+  .poke-id {
+    font-size: 24px;
+  }
 
-    .close-button {
-        height: 30px;
-        width: 33px;
-    }
-    
+  .poke-name {
+    font-size: 24px;
+  }
+
+  .close-button {
+    height: 30px;
+    width: 33px;
+  }
 }
 
 @media only screen and (max-width: 575px) {
-    .div-principal {
-        height: 280px;
-        flex-direction: column;
-    }
-    
-    .image-original {
-        height: 130px;
-        width: 130px;
-    }
+  .div-principal {
+    height: 280px;
+    flex-direction: column;
+  }
 
-    .poke-id {
-        font-size: 20px;
-    }
-    
-    .poke-name {
-        font-size: 20px;
-    }
-    
-    .div-infos {
-        margin-top: 15px;
-        margin-right: 30px;
-        margin-left: 30px;
-    }
+  .image-original {
+    height: 130px;
+    width: 130px;
+  }
 
-    .div-types {
-        justify-content: center;
-        align-items: center;
-    }
+  .poke-id {
+    font-size: 20px;
+  }
 
-    .id-name {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
+  .poke-name {
+    font-size: 20px;
+  }
 
-    .close-button {
-        height: 20px;
-        width: 22px;
-    }
+  .div-infos {
+    margin-top: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
 
-    .poke-types {
-        margin-right: 0;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
+  .div-types {
+    justify-content: center;
+    align-items: center;
+  }
 
-    .div-stats {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 0;
-    }
+  .id-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .data {
-        margin-right: 30px;
-        margin-left: 30px;
-    }
-    
-    .data h3 {
-        font-size: 18px;
-        margin-top: 10px;
-    }
-    
-    .data p {
-        margin-top: 6px;
-        margin-bottom: 6px;
-        font-size: 12px;
-    }
-    
-    .stats {
-        margin-right: 30px;
-        margin-left: 30px;
-    }
-    
-    .stats p {
-        margin-top: 6px;
-        margin-bottom: 6px;
-        font-size: 12px;
-    }
-    
-    .stats h3 {
-        font-size: 18px;
-        margin-top: 10px;
-    }
+  .close-button {
+    height: 20px;
+    width: 22px;
+  }
+
+  .poke-types {
+    margin-right: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .div-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
+  .data {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .data h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .data p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .stats {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .stats p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .stats h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
 }
 
-@media only screen and (max-height: 700px) and (max-width: 600px){
-    .div-principal {
-        height: 220px;
-    }
+@media only screen and (max-height: 700px) and (max-width: 600px) {
+  .div-principal {
+    height: 220px;
+  }
 
-    .image-original {
-        height: 90px;
-        width: 90px;
-    }
+  .image-original {
+    height: 90px;
+    width: 90px;
+  }
 
-    .poke-id {
-        font-size: 16px;  
-    }
-    
-    .poke-name {
-        font-size: 16px;
-    }
+  .poke-id {
+    font-size: 16px;
+  }
 
-    .poke-types {
-        color: #fafafa;
-        font-size: 12px;
-    }
+  .poke-name {
+    font-size: 16px;
+  }
+
+  .poke-types {
+    color: #fafafa;
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 300px) {
-    .div-principal {
-        height: 190px;
-    }
+  .div-principal {
+    height: 190px;
+  }
 
-    .image-original {
-        height: 80px;
-        width: 80px;
-    }
-    
-    .poke-id {
-        font-size: 15px;  
-    }
-    
-    .poke-name {
-        font-size: 15px;
-    }
+  .image-original {
+    height: 80px;
+    width: 80px;
+  }
 
-    .poke-types {
-        color: #fafafa;
-        font-size: 12px;
-    }
+  .poke-id {
+    font-size: 15px;
+  }
 
-    .stats-name {
-        width: 80px;
-    }
+  .poke-name {
+    font-size: 15px;
+  }
 
-    .bar {
-        width: 100px;
-    }
+  .poke-types {
+    color: #fafafa;
+    font-size: 12px;
+  }
+
+  .stats-name {
+    width: 80px;
+  }
+
+  .bar {
+    width: 100px;
+  }
 }
 
 @media only screen and (max-height: 800px) {
-    .stats-bar {
-        height: 35px;
-    }
+  .stats-bar {
+    height: 35px;
+  }
 }
 
 @media only screen and (max-width: 950px) and (max-height: 1400px) {
-    .stats-bar {
-        height: 26px;
-    }
+  .stats-bar {
+    height: 26px;
+  }
 }

@@ -1,27 +1,27 @@
 header {
-    background: #b71c1c;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    height: 180px;
-    align-items: center;
-  }
+  background: #b71c1c;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  height: 180px;
+  align-items: center;
+}
 
 .charmander {
   height: 160px;
   margin-left: 40px;
-  }
-  
+}
+
 .pikachu {
   height: 160px;
   margin-right: 50px;
 }
-  
+
 .pokedex {
   height: 140px;
 }
-  
+
 @media only screen and (max-width: 950px) {
   .charmander {
     height: 120px;
@@ -83,7 +83,6 @@ header {
 }
 
 @media only screen and (min-width: 1400px) {
-  
   .charmander {
     height: 200px;
   }
@@ -96,5 +95,4 @@ header {
   header {
     height: 240px;
   }
-
 }
