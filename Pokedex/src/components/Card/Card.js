@@ -1,7 +1,7 @@
 import "./index.css";
 import Pagination from "../Pagination/Pagination";
 import CardContentContainer from "../CardContent/CardContentContainer";
-import Modal from "../Modal";
+import ModalContainer from "../Modal/ModalContainer";
 
 function Card({
   pokemons,
@@ -32,7 +32,7 @@ function Card({
       </div>
 
       {showModal ? (
-        <Modal setShowModal={setShowModal} namePoke={pokemonName} />
+        <ModalContainer setShowModal={setShowModal} pokemonName={pokemonName} />
       ) : null}
 
       <Pagination

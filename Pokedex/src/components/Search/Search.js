@@ -1,8 +1,8 @@
 import CardContentContainer from "../CardContent/CardContentContainer";
-import Modal from "../Modal";
 import pokeball from "../../assets/pokebola.png";
 import "./index.css";
 import CardContainer from "../Card/CardContainer";
+import ModalContainer from "../Modal/ModalContainer";
 
 function Search({
   handleOnChangeSearch,
@@ -45,7 +45,7 @@ function Search({
       )}
 
       {showModal ? (
-        <Modal namePoke={pokemonName} setShowModal={setShowModal} />
+        <ModalContainer pokemonName={pokemonName} setShowModal={setShowModal} />
       ) : null}
     </>
   );

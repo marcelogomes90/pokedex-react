@@ -7,7 +7,7 @@ function CardContent({ types, ids, names, firstType }) {
       {firstType
         ?.filter((pokemon) => pokemon.slot === 1)
         .map((poketype) => (
-          <div className={`${poketype.type.name}-bg pokemon-type-bg`}>
+          <div className={`${poketype.type.name}-bg pokemon-type-bg`} key={poketype.type.name}>
             <img
               className="pokemon-img"
               alt="pokemon-img"
@@ -22,7 +22,7 @@ function CardContent({ types, ids, names, firstType }) {
       </div>
       <div className="pokemon-types">
         {types?.map((pokemon) => (
-          <p className={`${pokemon.type.name} pokemon-type`}>
+          <p className={`${pokemon.type.name} pokemon-type`} key={pokemon.type.name}>
             {pokemon.type.name}
           </p>
         ))}
