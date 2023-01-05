@@ -1,5 +1,5 @@
 import Card from "../Card";
-import CardContent from "../CardContent";
+import CardContentContainer from "../CardContent/CardContentContainer";
 import Modal from "../Modal";
 import pokeball from "../../assets/pokebola.png";
 import "./index.css";
@@ -40,7 +40,7 @@ function Search({
             id={`${pokemonName}`}
             onClick={getPokemonName && handleShowModal}
           >
-            <CardContent pokemonName={pokemonName} />
+            <CardContentContainer pokemonName={pokemonName} />
           </div>
         </div>
       )}

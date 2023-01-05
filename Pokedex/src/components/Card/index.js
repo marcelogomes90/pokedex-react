@@ -3,7 +3,7 @@ import './index.css'
 import { useState, useEffect } from 'react';
 import api from '../../services/api';
 import Pagination from '../Pagination/Pagination';
-import CardContent from '../CardContent';
+import CardContentContainer from '../CardContent/CardContentContainer';
 import Modal from '../Modal';
 
 function Card() {
@@ -50,7 +50,7 @@ function Card() {
             <div className='card-area'> 
                 {pokemon?.map((pokecard) => ( 
                     <div key={`${pokecard.name}`} className="card" id={`${pokecard.name}`} onClick={show} onClickCapture={getPokeName}>
-                        <CardContent pokemonName={ pokecard.name }/>
+                        <CardContentContainer pokemonName={pokecard.name}/>
                     </div>
                 ))}
             </div>
