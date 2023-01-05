@@ -20,7 +20,10 @@ function Modal({
       {firstType
         .filter((pokemon) => pokemon.slot === 1)
         .map((poketype) => (
-          <div className={`${poketype.type.name}-div div-principal`} key={poketype.type.name}>
+          <div
+            className={`${poketype.type.name}-div div-principal`}
+            key={poketype.type.name}
+          >
             <img
               alt="close-button"
               className="close-button"
@@ -39,7 +42,10 @@ function Modal({
               </div>
               <div className="div-types">
                 {typesModal?.map((pokemon) => (
-                  <p className={`${pokemon.type.name}-modal poke-types`} key={pokemon.type.name}>
+                  <p
+                    className={`${pokemon.type.name}-modal poke-types`}
+                    key={pokemon.type.name}
+                  >
                     {pokemon.type.name}
                   </p>
                 ))}
@@ -100,7 +106,9 @@ function Modal({
               .filter((pokemon) => pokemon.stat.name === "attack")
               .map((pokestats) => (
                 <>
-                  <p className="stats-numbers" key={pokestats.base_stat}>{pokestats.base_stat}</p>
+                  <p className="stats-numbers" key={pokestats.base_stat}>
+                    {pokestats.base_stat}
+                  </p>
                   <div
                     style={{
                       width: `${pokestats.base_stat / 4}%`,
@@ -122,7 +130,9 @@ function Modal({
               .filter((pokemon) => pokemon.stat.name === "defense")
               .map((pokestats) => (
                 <>
-                  <p className="stats-numbers" key={pokestats.base_stat}>{pokestats.base_stat}</p>
+                  <p className="stats-numbers" key={pokestats.base_stat}>
+                    {pokestats.base_stat}
+                  </p>
                   <div
                     style={{
                       width: `${pokestats.base_stat / 4}%`,
@@ -144,7 +154,9 @@ function Modal({
               .filter((pokemon) => pokemon.stat.name === "special-attack")
               .map((pokestats) => (
                 <>
-                  <p className="stats-numbers" key={pokestats.base_stat}>{pokestats.base_stat}</p>
+                  <p className="stats-numbers" key={pokestats.base_stat}>
+                    {pokestats.base_stat}
+                  </p>
                   <div
                     style={{
                       width: `${pokestats.base_stat / 4}%`,
@@ -166,7 +178,9 @@ function Modal({
               .filter((pokemon) => pokemon.stat.name === "special-defense")
               .map((pokestats) => (
                 <>
-                  <p className="stats-numbers" key={pokestats.base_stat}>{pokestats.base_stat}</p>
+                  <p className="stats-numbers" key={pokestats.base_stat}>
+                    {pokestats.base_stat}
+                  </p>
                   <div
                     style={{
                       width: `${pokestats.base_stat / 4}%`,
@@ -188,7 +202,9 @@ function Modal({
               .filter((pokemon) => pokemon.stat.name === "speed")
               .map((pokestats) => (
                 <>
-                  <p className="stats-numbers" key={pokestats.base_stat}>{pokestats.base_stat}</p>
+                  <p className="stats-numbers" key={pokestats.base_stat}>
+                    {pokestats.base_stat}
+                  </p>
                   <div
                     style={{
                       width: `${pokestats.base_stat / 4}%`,
