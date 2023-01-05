@@ -35,8 +35,6 @@ function CardContainer() {
     setCurrentPageUrl(prevPageUrl);
   }
 
-  if (loading) return;
-
   return (
     <Card
       pokemons={pokemons}
@@ -49,6 +47,7 @@ function CardContainer() {
       gotoPrevPage={gotoPrevPage}
       handleModal={handleModal}
       getPokemonName={getPokemonName}
+      loading={loading}
     />
   );
 }

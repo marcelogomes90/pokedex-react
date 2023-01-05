@@ -31,7 +31,7 @@ function SearchContainer() {
         let res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${findPokemon}`);
         setPokemonName(res.data.name);
       } catch (error) {
-        alert("Pokemon not found, try again!");
+        alert("Name or id not found, try again!");
         setSearching(false);
       }
     }

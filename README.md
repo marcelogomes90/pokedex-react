@@ -9,7 +9,7 @@ O projeto consiste na criação de uma pokedex web, que faz a listagem de todos 
 ### Funcionalidades
 
 - Listagem dos pokemons;
- 
+
 - Paginação;
 
 - Pesquisa dos pokemons por id ou pelo nome;
