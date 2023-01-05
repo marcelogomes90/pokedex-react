@@ -25,10 +25,6 @@ function SearchContainer() {
 
   const handleShowModal = () => setShowModal(true);
 
-  const getPokemonName = (e) => {
-    setPokemonName(e.currentTarget.id);
-  };
-
   useEffect(() => {
     async function getData() {
       try {
@@ -52,7 +48,6 @@ function SearchContainer() {
       handleShowModal={handleShowModal}
       searching={searching}
       searchPokemon={searchPokemon}
-      getPokemonName={getPokemonName}
       setShowModal={setShowModal}
     />
   );

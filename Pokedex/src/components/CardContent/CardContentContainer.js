@@ -15,7 +15,7 @@ function CardContentContainer({ pokemonName }) {
       setNames(data.name);
       setFirstType(data.types);
     });
-  }, []);
+  }, [pokemonName]);
 
   return (
     <CardContent types={types} ids={ids} names={names} firstType={firstType} />

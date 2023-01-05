@@ -1,8 +1,8 @@
-import Card from "../Card";
 import CardContentContainer from "../CardContent/CardContentContainer";
 import Modal from "../Modal";
 import pokeball from "../../assets/pokebola.png";
 import "./index.css";
+import CardContainer from "../Card/CardContainer";
 
 function Search({
   handleOnChangeSearch,
@@ -12,7 +12,6 @@ function Search({
   searching,
   searchName,
   searchPokemon,
-  getPokemonName,
   setShowModal,
 }) {
   return (
@@ -31,14 +30,14 @@ function Search({
       </div>
 
       {!searching ? (
-        <Card />
+        <CardContainer />
       ) : (
         <div className="card-area">
           <div
             key={`${pokemonName}`}
             className="card"
             id={`${pokemonName}`}
-            onClick={getPokemonName && handleShowModal}
+            onClick={handleShowModal}
           >
             <CardContentContainer pokemonName={pokemonName} />
           </div>
