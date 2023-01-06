@@ -42,7 +42,7 @@ function Card({
             ariaLabel="blocks-loading"
             wrapperStyle={{}}
             wrapperClass="blocks-wrapper"
-            colors={["#e15b64", "#f8b26a", "#abbd81", "#808080", "#87CEEB"]}
+            colors={["#e15b64", "#808080", "#f0f0f0", "#808080", "#e15b64"]}
           />
         </div>
       )}
